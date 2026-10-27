@@ -94,7 +94,7 @@
         const status = document.getElementById('email-status')
         if (!email) { status.textContent = 'Введите email'; return; }
         status.textContent = 'Отправка...'
-        fetch('http://127.0.0.1:18901/api/email-capture', {
+        fetch('http://127.0.0.1:18902/api/email-capture', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, source: location.pathname })
